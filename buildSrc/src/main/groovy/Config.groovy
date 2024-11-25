@@ -48,10 +48,10 @@ class Config {
 
             // 上传新版本插件更新 path 中的版本号，并设置 isApply = false
             // 通过 mavenLocal 上传本地版本，设置 isApply = true 即可应用插件来调试，最后通过 bintrayUpload 来发布插件
-            plugin_api     : new PluginConfig(isApply: true, useLocal: false, path: "com.blankj:api-gradle-plugin:1.5", id: "com.blankj.api"),
+            plugin_api     : new PluginConfig(isApply: false, useLocal: false, path: "com.blankj:api-gradle-plugin:1.5", id: "com.blankj.api"),
             //./gradlew clean :plugin_api-gradle-plugin:mavenLocal     // 上传到本地 mavenLocal
             //./gradlew clean :plugin_api-gradle-plugin:bintrayUpload  // 上传到 jcenter
-            plugin_bus     : new PluginConfig(isApply: true, useLocal: false, path: "com.blankj:bus-gradle-plugin:2.6", id: "com.blankj.bus"),
+            plugin_bus     : new PluginConfig(isApply: false, useLocal: false, path: "com.blankj:bus-gradle-plugin:2.6", id: "com.blankj.bus"),
             //./gradlew clean :plugin_bus-gradle-plugin:mavenLocal     // 上传到本地 mavenLocal
             //./gradlew clean :plugin_bus-gradle-plugin:bintrayUpload  // 上传到 jcenter
             plugin_buildSrc: new PluginConfig(isApply: false, useLocal: false, path: "com.blankj:buildSrc-plugin:1.0", id: "com.blankj.buildSrc"),
